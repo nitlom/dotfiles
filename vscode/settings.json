@@ -1,0 +1,33 @@
+{
+    "[go]": {
+        "breadcrumbs.showInterfaces": true,
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        }
+    },
+    "[jinja]": {},
+    "ansible.validation.lint.path": "/usr/bin/ansible-lint",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.cursorSurroundingLines": 10,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.renderFinalNewline": "on",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "gitlab.showPipelineUpdateNotifications": true,
+    "go.toolsManagement.autoUpdate": true,
+    "gopls": {
+        "ui.diagnostic.staticcheck": true,
+        "ui.diagnostic.analyses": {
+            "ST1000": false,
+            "ST1018": false
+        },
+        "ui.semanticTokens": true
+    },
+    "redhat.telemetry.enabled": false,
+    "settingsSync.ignoredSettings": [],
+}
