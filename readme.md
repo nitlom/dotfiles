@@ -7,7 +7,7 @@ This is just a collection of my most used dotfiles.
 Just run the supplied install-script, and you should be set!
 
 ```bash
-$ ./install.sh
+./install.sh
 ```
 
 Old files are not removed, but renamed to $filename_beforedotfiles, so nothing is lost.
