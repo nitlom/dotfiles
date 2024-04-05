@@ -29,5 +29,5 @@
         "ui.semanticTokens": true
     },
     "redhat.telemetry.enabled": false,
-    "settingsSync.ignoredSettings": [],
+    "settingsSync.ignoredSettings": []
 }
