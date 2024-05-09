@@ -29,5 +29,6 @@
         "ui.semanticTokens": true
     },
     "redhat.telemetry.enabled": false,
-    "settingsSync.ignoredSettings": []
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.preferredDarkColorTheme": "Default Dark+"
 }
