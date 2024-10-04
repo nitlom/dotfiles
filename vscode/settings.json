@@ -1,34 +1,54 @@
 {
-    "[go]": {
-        "breadcrumbs.showInterfaces": true,
-        "editor.insertSpaces": false,
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        }
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.cursorSurroundingLines": 10,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderFinalNewline": "on",
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "gitlab.duoCodeSuggestions.enabled": false,
+  "gitlab.duoChat.enabled": false,
+  "gitlab.duoCodeSuggestions.openTabsContext": false,
+  "gitlab.showPipelineUpdateNotifications": true,
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "ui.diagnostic.staticcheck": true,
+    "ui.diagnostic.analyses": {
+      "ST1000": false,
+      "ST1018": false
     },
-    "[jinja]": {},
-    "ansible.validation.lint.path": "/usr/bin/ansible-lint",
-    "editor.acceptSuggestionOnEnter": "smart",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "editor.cursorSurroundingLines": 10,
-    "editor.formatOnPaste": true,
+    "ui.semanticTokens": true
+  },
+  "redhat.telemetry.enabled": false,
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "go.lintFlags": [
+    "--fast"
+  ],
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "yaml.customTags": [
+    "!reference sequence"
+  ],
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "[go]": {
+    "breadcrumbs.showInterfaces": true,
+    "editor.insertSpaces": false,
     "editor.formatOnSave": true,
-    "editor.minimap.enabled": false,
-    "editor.renderFinalNewline": "on",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "gitlab.showPipelineUpdateNotifications": true,
-    "go.toolsManagement.autoUpdate": true,
-    "gopls": {
-        "ui.diagnostic.staticcheck": true,
-        "ui.diagnostic.analyses": {
-            "ST1000": false,
-            "ST1018": false
-        },
-        "ui.semanticTokens": true
-    },
-    "redhat.telemetry.enabled": false,
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.preferredDarkColorTheme": "Default Dark+"
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  },
 }
