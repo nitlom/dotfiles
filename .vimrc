@@ -14,6 +14,8 @@ filetype plugin on
 " Load an indent file for the detected file type.
 filetype indent on
 
+set autoindent
+
 " syntax highlighting
 syntax on
 
@@ -29,11 +31,11 @@ set cursorline
 " Highlight cursor line underneath the cursor vertically.
 " set cursorcolumn
 
-" Set shift width to 4 spaces.
-set shiftwidth=4
+" Set shift width to 2 spaces.
+set shiftwidth=2
 
-" Set tab width to 4 columns.
-set tabstop=4
+" Set tab width to 2 columns.
+set tabstop=2
 
 " Use space characters instead of tabs.
 set expandtab
