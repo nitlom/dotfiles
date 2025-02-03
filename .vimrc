@@ -13,7 +13,6 @@ filetype plugin on
 
 " Load an indent file for the detected file type.
 filetype indent on
-
 set autoindent
 
 " syntax highlighting
@@ -90,6 +89,7 @@ let g:indentLine_char = '⦙'
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
@@ -116,16 +116,25 @@ Plug 'glench/vim-jinja2-syntax'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdtree'
+Plug 'pedrohdz/vim-yaml-folds'
 
 " end plugin section
 call plug#end()
 map <leader>e :bufdo e!<CR>
+
+" Vim has built-in support for folding based on the indentation level 
+" but the default folding rules make it hard to tell what is folded. 
+" This is because the folding starts on the line following the start of a block. 
+" To change this we can install the vim-yaml-folds plugin.
+set foldlevelstart=20
+
 au FileType go nmap <leader>c <Plug>(go-test)
 
-"show hidden files (.file) in NERDTree
-let NERDTreeShowHidden = 1
+" show hidden files (.file) in NERDTree
+let NERDTreeShowHidden = 0
 let NERDTreeQuitOnOpen = 1
-" map F6 to toggle NERDTree
+
+" map Control-n to toggle NERDTree
 nmap <C-n> :NERDTreeMirror<CR>:NERDTreeToggle<CR>
 "
 " Exit Vim if NERDTree is the only window remaining in the only tab.
@@ -134,6 +143,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 
+" Stuff for the vim-go plugin
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
