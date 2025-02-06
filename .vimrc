@@ -118,6 +118,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'preservim/nerdtree'
 Plug 'pedrohdz/vim-yaml-folds'
 
@@ -139,7 +140,7 @@ let NERDTreeQuitOnOpen = 1
 
 " map Control-n to toggle NERDTree
 nmap <C-n> :NERDTreeMirror<CR>:NERDTreeToggle<CR>
-"
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif 
 
@@ -154,6 +155,20 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+" this can be used to specify which linters to call, when using autosave
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+" to prevent :GoMetaLinter running for too long
+let g:go_metalinter_deadline = "5s"
 let g:go_fmt_command = "goimports"
+
+" ,t runs go test in current folder
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+
+" ,b builds current context
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+
+" ,c runs coverage
+autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 
